@@ -1,0 +1,22 @@
+{
+  "name": "employee-info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=develop nodemon server.js"
+  },
+  "author": "Matthew Snow",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-sanitizer": "^1.0.5",
+    "mongodb": "^3.5.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.0",
+    "nodemon": "^2.0.2"
+  }
+}
