@@ -1,8 +1,16 @@
 # Employee Info - Instructions!!!
 
+## Dependencies:
+
+Node version - 11.13
+MongoDB version - 4.0.11
+
+## Starting Instructions
+
 Perform a git clone from the repository, then navigate to the main directory from a terminal.
 
 First run 'npm install' to install all necessary dependencies.
+
 Next run 'npm run build' to run webpack, which will bundle our front end react app.
 
 *** If you want to manually seed a few employees, run 'npm run seed'.
