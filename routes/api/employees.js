@@ -26,7 +26,8 @@ router.post('/', (req, res, next) => {
 
     var newEmployee = {
         name: req.sanitize(req.body.name),
-        occupation: req.sanitize(req.body.occupation)
+        occupation: req.sanitize(req.body.occupation),
+        skills: req.sanitize(req.body.skills).split(',')
     }
 
     Employee.createOne(newEmployee, (err, result) => {

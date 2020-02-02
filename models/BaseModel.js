@@ -20,16 +20,18 @@ returns - A promise which resolves to our reformatted 'NewModel' object
 */
 
 function BaseModel(collectionName, schema) {
+    this.schema = schema;
+    this.collectionName = collectionName;
 
-    var collection = function () {
-        return getCollection(collectionName)
+    // using an arrow function as opposed to binding this to the function context so that we can have multiple schemas
+    var collection = () => {
+        return getCollection(this.collectionName)
     };
 
     /*
     Can overwrite the original collection object here
     */
 
-    this.schema = schema; // will create a new instance of base model in specific models
     
     this.hooks = {
         beforeCreate: (obj) => {
@@ -49,7 +51,6 @@ function BaseModel(collectionName, schema) {
         },
 
         beforeCreateMany: () => {
-
         },
 
         beforeUpdateMany: () => {

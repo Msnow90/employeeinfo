@@ -1,0 +1,15 @@
+.home-container {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+    width:50%;
+}
+
+.home-employee-card {
+    margin-bottom: 25px;
+    border: 5px black outset;
+}
+
+.home-employee-card:hover {
+    border: 5px black inset;
+}

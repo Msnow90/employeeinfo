@@ -3,10 +3,11 @@
     Packages, Dependencies, Config.
 =======================================
 */
-
-const app = require('express')();
+const express = require('express');
+const app = express();
 const bodyParser = require('body-parser');
 const expressSanitizer = require('express-sanitizer');
+const path = require('path');
 
 const config = require('./config');
 const port = process.env.PORT || config.port;
@@ -28,6 +29,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressSanitizer());
 
+app.use(express.static(path.resolve(__dirname, 'public')));
+
 /*
 =======================
         Routes
@@ -35,6 +38,10 @@ app.use(expressSanitizer());
 */
 
 app.use(apiRoutes);
+
+app.get('/*', (req, res, next) => {
+    res.sendFile(path.resolve(__dirname, 'public/index.html'));
+})
 
 app.use((err, req, res, next) => {
     console.log('error is: ', err)

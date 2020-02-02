@@ -1,0 +1,418 @@
+:root {
+	--light-blue: #3fc9ea;
+	--purple: #7d53de;
+	--light-white: #eef8ff;
+	--very-light-blue: #d1f5ff;
+	--darker-light-blue: #14bbe2;
+	--darker-purple: #6534d8;
+
+	--action: var(--purple);
+	--darker-action: var(--darker-purple);
+
+	--nonaction: var(--light-blue);
+	--darker-nonaction: var(--darker-light-blue);
+	
+	--bg: var(--light-white);
+	
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  /* font-family: geomanist,Helvetica,Arial; */
+  /* font: 300 18px/1.666666666667em geomanist,Helvetica,Arial; */
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 5px solid #CCCCCC;
+  margin-right: 40px;
+}
+
+/*
+
+**** Styles for all buttons **** 
+
+*/
+
+.cursor {
+  cursor: pointer;
+}
+
+.action-btn {
+	background-color: var(--action);
+	color: white;
+	font-weight:bold;
+}
+
+.action-btn:hover {
+	background-color: var(--darker-action);
+}
+
+.nonaction-btn {
+	background-color: var(--nonaction);
+	color: white;
+	font-weight: bold;
+	border: 1px solid var(--darker-nonaction);
+}
+
+.nonaction-btn:hover {
+	background-color: var(--darker-nonaction);
+}
+
+/* html {
+	background-color: var(--bg);
+}
+
+body {
+	background-color: var(--bg);
+} */
+
+
+/*
+
+**** Styles for forms and inputs in Login and Register Components ****
+
+*/
+
+.form-container {
+	text-align:center;
+	width:30%;
+	background-color: transparent;
+}
+
+.form-container .form-control {
+	background-color: transparent;
+}
+
+.form-container .form-group {
+	margin: 30px 0;
+}
+
+
+
+
+body{
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.drawing{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: block;
+    background-color: #3a3a3a;
+}
+
+/* Universal spacing stuff */
+
+.no-margin {
+  margin: 0;
+}
+
+
+/*  Loading Screen CSS  */
+
+
+.loading-dot {
+    border-radius:100%;
+    height:10px;
+    width:10px;
+    background-color: #ffffff;
+    position:absolute;
+    left:0;
+    right:0;
+    margin:auto;
+    top:0;
+    bottom:0;
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    40px 40px 0px 0px #ffffff,-40px -40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff;
+    -webkit-animation: load 3s infinite linear;
+    -moz-animation: load 3s infinite linear;
+    -o-animation: load 3s infinite linear;
+    animation:load 3s infinite linear;
+}
+
+
+@-webkit-keyframes load {
+  0%   {
+    -webkit-transform: translate(0px,0px),rotate(0deg); 
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    40px 40px 0px 0px #ffffff,-40px -40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff;
+  }
+
+  25%{
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    -40px -40px 0px 0px #ffffff,40px 40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff;
+  }
+
+  50%{
+    box-shadow: 0px -40px 0px 0px #ffffff,0px 40px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,
+    -40px -40px 0px 0px #ffffff,40px 40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff;
+  }
+
+  70%{
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+  }
+
+  75%{
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    height:10px;
+    width:10px;
+  }
+
+  80%{
+    -webkit-transform: translate(0px,0px) rotate(360deg); 
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    background-color: #ffffff;
+    height:40px;
+    width:40px;
+  }
+
+  85%{
+    -webkit-transform: translate(0px,0px) rotate(360deg);
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    background-color: #ffffff; 
+    height:40px;
+    width:40px;
+  }
+
+  90%{
+    -webkit-transform: translate(0px,0px) rotate(360deg); 
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    background-color: #ffffff; 
+    height:10px;
+    width:10px;
+  }
+
+  95%{
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    40px 40px 0px 0px #ffffff,-40px -40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff;
+  }
+
+  100%{
+    -webkit-transform: rotate(360deg);
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    40px 40px 0px 0px #ffffff,-40px -40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff;
+  }
+
+}
+
+@-moz-keyframes load {
+  0%   {
+    -moz-transform: translate(0px,0px),rotate(0deg); 
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    40px 40px 0px 0px #ffffff,-40px -40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff;
+  }
+
+  25%{
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    -40px -40px 0px 0px #ffffff,40px 40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff;
+  }
+
+  50%{
+    box-shadow: 0px -40px 0px 0px #ffffff,0px 40px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,
+    -40px -40px 0px 0px #ffffff,40px 40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff;
+  }
+
+  70%{
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+  }
+
+  75%{
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    height:10px;
+    width:10px;
+  }
+
+  80%{
+    -moz-transform: translate(0px,0px) rotate(360deg); 
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    background-color: #ffffff;
+    height:40px;
+    width:40px;
+  }
+
+  85%{
+    -moz-transform: translate(0px,0px) rotate(360deg);
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    background-color: #ffffff; 
+    height:40px;
+    width:40px;
+  }
+
+  90%{
+    -moz-transform: translate(0px,0px) rotate(360deg); 
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    background-color: #ffffff; 
+    height:10px;
+    width:10px;
+  }
+
+  95%{
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    40px 40px 0px 0px #ffffff,-40px -40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff;
+  }
+
+  100%{
+    -moz-transform: rotate(360deg);
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    40px 40px 0px 0px #ffffff,-40px -40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff;
+  }
+
+}
+
+@keyframes load {
+  0%   {
+    transform: translate(0px,0px),rotate(0deg); 
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    40px 40px 0px 0px #ffffff,-40px -40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff;
+  }
+
+  25%{
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    -40px -40px 0px 0px #ffffff,40px 40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff;
+  }
+
+  50%{
+    box-shadow: 0px -40px 0px 0px #ffffff,0px 40px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,
+    -40px -40px 0px 0px #ffffff,40px 40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff;
+  }
+
+  70%{
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+  }
+
+  75%{
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    height:10px;
+    width:10px;
+  }
+
+  80%{
+    transform: translate(0px,0px) rotate(360deg); 
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    background-color: #ffffff;
+    height:40px;
+    width:40px;
+  }
+
+  85%{
+    transform: translate(0px,0px) rotate(360deg);
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    background-color: #ffffff; 
+    height:40px;
+    width:40px;
+  }
+
+  90%{
+    transform: translate(0px,0px) rotate(360deg); 
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    background-color: #ffffff; 
+    height:10px;
+    width:10px;
+  }
+
+  95%{
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    40px 40px 0px 0px #ffffff,-40px -40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff;
+  }
+
+  100%{
+    transform: rotate(360deg);
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    40px 40px 0px 0px #ffffff,-40px -40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff;
+  }
+
+}
+@-o-keyframes load {
+  0%   {
+    -o-transforms: translate(0px,0px),rotate(0deg); 
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    40px 40px 0px 0px #ffffff,-40px -40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff;
+  }
+
+  25%{
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    -40px -40px 0px 0px #ffffff,40px 40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff;
+  }
+
+  50%{
+    box-shadow: 0px -40px 0px 0px #ffffff,0px 40px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,
+    -40px -40px 0px 0px #ffffff,40px 40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff;
+  }
+
+  70%{
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+  }
+
+  75%{
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    height:10px;
+    width:10px;
+  }
+
+  80%{
+    -o-transforms: translate(0px,0px) rotate(360deg); 
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    background-color: #ffffff;
+    height:40px;
+    width:40px;
+  }
+
+  85%{
+    -o-transforms: translate(0px,0px) rotate(360deg);
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    background-color: #ffffff; 
+    height:40px;
+    width:40px;
+  }
+
+  90%{
+    -o-transforms: translate(0px,0px) rotate(360deg); 
+    box-shadow: 0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,
+    0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff,0px 0px 0px 0px #ffffff;
+    background-color: #ffffff; 
+    height:10px;
+    width:10px;
+  }
+
+  95%{
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    40px 40px 0px 0px #ffffff,-40px -40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff;
+  }
+
+  100%{
+    -o-transforms: rotate(360deg);
+    box-shadow: 0px 40px 0px 0px #ffffff,0px -40px 0px 0px #ffffff,40px 0px 0px 0px #ffffff,-40px 0px 0px 0px #ffffff,
+    40px 40px 0px 0px #ffffff,-40px -40px 0px 0px #ffffff,40px -40px 0px 0px #ffffff,-40px 40px 0px 0px #ffffff;
+  }
+
+}

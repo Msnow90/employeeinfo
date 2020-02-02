@@ -5,7 +5,8 @@ function Employee() {
 
     var EmployeeSchema = {
         name: 'string',
-        occupation: 'string'
+        occupation: 'string',
+        skills: 'array'
     }
 
 

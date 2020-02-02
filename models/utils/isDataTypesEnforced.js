@@ -6,8 +6,19 @@ function isDataTypesEnforced(schema, objToValidate) {
     propertyNamesOfSchema.forEach(prop => {
         var datatype = schema[prop];
 
-        if (typeof objToValidate[prop] != datatype)
-            possibleErrors.push(`Property '${prop}' is not of data type: ${datatype}.`)
+        // would add more datatypes, but I'm just showing proof of concept
+        switch(datatype) {
+            case 'string':
+                if (typeof objToValidate[prop] != datatype)
+                    possibleErrors.push(`Property '${prop}' is not of data type: ${datatype}.`);
+                break;
+            
+            case 'array':
+                if (!Array.isArray(objToValidate[prop]))
+                    possibleErrors.push(`Property '${prop}' is not of data type: ${datatype}.`);
+                break;
+        }
+
     })
 
     if (possibleErrors.length == 0)
