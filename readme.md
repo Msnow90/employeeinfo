@@ -51,11 +51,11 @@ The methods involved in the BaseModel are:
 
 *** Prepended by /employees (/api/employees)
 
-Route | Verb | Description
+Route | Verb | Description | Data To Send
 --- | --- | ---
 / | GET | Returns array of all employees
 /:id | GET | Returns an employee by id
-/ | POST | Creates an employee
+/ | POST | Creates an employee | { name: *string*, occupation: *string*, skills: *comma separated strings*}
 /:id | PUT | Update an employee based on id
 /:id | DELETE | Delete an employee based on id
 
