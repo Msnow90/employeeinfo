@@ -24,16 +24,23 @@ router.get('/:id', (req, res, next) => {
 
 router.post('/', (req, res, next) => {
 
+    //Needs some middleware to verify the schema body is correct
+    if(req.body.skills == null || req.body.skills == undefined) 
+        return res.status(400).json({error: "Employees related skills not sent in body."});
+
     var newEmployee = {
         name: req.sanitize(req.body.name),
         occupation: req.sanitize(req.body.occupation),
         skills: req.sanitize(req.body.skills).split(',')
     }
 
+
+    //Problem with the ORM architecture you have set up here is that it doesn't handle errors
+
     Employee.createOne(newEmployee, (err, result) => {
         if (err)
-            return next(err);
-        res.json(result);
+            return res.status(400).json(err);
+        res.json(result); //Send valid http codes inside your responses.
     })
 })
 
