@@ -30,6 +30,8 @@ export default class Root extends Component {
 				this.setState({
 					employees: res.data
 				})
+			}).catch(err => { //Missing .catch
+				console.log(err);
 			})
 	}
 
